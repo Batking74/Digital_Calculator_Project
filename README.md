@@ -2,7 +2,7 @@
 
 ### Description
 This was just a fun practice project (2021)
-Building a simple calculator using the technologies I taught myself.
+Building a simple calculator using the technologies I Learned myself.
 
 ![Image of Naz's Calculator Project](./Calculator_project.png)
 

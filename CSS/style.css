@@ -17,32 +17,20 @@ p {
 .calculator-grid {
     display: grid;
     justify-content: center;
-    /* at first I used align-items, but I changed it to align-content because I wanted to align the entire content of my grid in the center. Not the items itself.  */
     align-content: center;
-    min-height: 100vh;
-    /* I have 4 columns and they're all 100px wide.  */
-    grid-template-columns: repeat(4, 100px);
-    /* This will allow the output at the top of the calculator to grow as long as it needs to when you're calculating numbers.
-    
-    The minmax value means at minimum I want it to be 120px and at maximum I want it to be auto which means it can grow as much as it needs to, to fit the number you're calculating or as large as it needs to be to fit everything. 
-    
-    repeat (5, 100px) is representing the rows. So, the 5 is telling the computer I want my calculator to be in rows of 5 with 100px spacing them out */
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    grid-template-columns: repeat(5, 90px);
+    grid-template-rows: minmax(120px, auto) repeat(7, 75px);
 }
 
 .calculator-grid > button {
     cursor: pointer;
-    /* The unit rem means "The root element's font-size". */
-    font-size: 2rem;
+    font-size: 1.7rem;
     border: 1px solid white;
     outline: none;
-    /* This is a regular rgb code, but there is an optional alpha component (a) at the end of the rgb that represents the color's transparency.
- */
     background-color: rgba(122, 236, 46, 0.726);
 }
 
 .calculator-grid > button:hover {
-    /* 0.9 */
     background-color: rgba(137, 212, 212, 0.1);
 }
 
@@ -51,36 +39,18 @@ p {
 }
 
 .output {
-    /* This is telling the computer that I want to start from column #1 and expand all the way to column #-1 which is the last column. This expands the entire width of the toprow of the calculator so you'll be able to highlight numbers and move them around anywhere in that space.  */
     grid-column: 1 / -1 ;
     background-color: rgba(0,0,0,.75);
     display: flex;
-    /* This aligns items at the end of output */
     align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
     padding: 10px;
-    /* This allows us to say where we want our numbers/words to wrap/break so it's not a long string of text or numbers. */
     word-wrap: break-word;
     word-break: break-all;
 }
 
-.output .previous-operand {
+.output .hex-operand, .binary-operand, .decimal-operand {
     color: white;
-    font-size: 1.5rem;
-}
-
-.output .current-operand {
-    color: white;
-    font-size: 2.5rem;
-}
-
-.funny {
-    text-align: center;
-    font-size: 20px;
-}
-
-.binary {
-    text-align: center;
-    font-size: 20px;
+    font-size: 1.8rem;
 }

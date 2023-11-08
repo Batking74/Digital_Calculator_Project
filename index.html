@@ -4,42 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <meta name="description" content="This was just a fun practice project (2021) Building a simple calculator using the technologies I Learned myself.">
     <link rel="stylesheet" href="./CSS/style.css">
+    <title>Calculator</title>
 </head>
 <body>
-    <div class="funny">
-        <h1>My Calculator</h1>
-        <p>Naz-ar-Knuckles@fatmeet.org aka TJ Hooker57/Bonquesha binary 1010100101 = 677 </p>
-    </div>
-    <div class="calculator-grid">
+    <main class="calculator-grid">
         <div class="output">
-            <div data-previous-operand class="previous-operand"><p id="previous-operand"></p></div>
-            <div data-current-operand class="current-operand"><p id="current-operand"></p></div>
+            <div class="binary-operand"><p id="binary-operand"></p></div>
+            <div class="hex-operand"><p id="hex-operand"></p></div>
+            <div class="decimal-operand"><p id="decimal-operand"></p></div>
         </div>
-        <button class="span-two">AC</button>
-        <button>DEL</button>
-        <button id="operation">÷</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button id="operation">×</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button id="operation">+</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button id="operation">-</button>
-        <button>.</button>
-        <button>0</button>
-        <button class="span-two">=</button>
-    </div>
-    <div class="binary">
-        <h1>What number is this 6 bit binary representing 101010?</h1>
-        <h3>Answer: 2+8+32 = 42. This 6 bit binary is representing the #42:</h3>
-    </div>
+        <button class="bit span-two">Factorial</button>
+        <button class="bit span-two">AC</button>
+        <button class="bit">DEL</button>
+        <button class="bit">Binary</button>
+        <button class="hex">A</button>
+        <button class="hex">B</button>
+        <button class="hex">C</button>
+        <button class="bit operation">%</button>
+        <button class="bit">Hex</button>
+        <button class="hex">D</button>
+        <button class="hex">E</button>
+        <button class="hex">F</button>
+        <button class="bit operation">÷</button>
+        <button class="bit operation">Mod</button>
+        <button class="dec">7</button>
+        <button class="dec">8</button>
+        <button class="dec">9</button>
+        <button class="bit operation">×</button>
+        <button class="bit operation">Log</button>
+        <button class="dec">4</button>
+        <button class="dec">5</button>
+        <button class="dec">6</button>
+        <button class="bit operation">+</button>
+        <button class="bit operation">Sqrt</button>
+        <button class="dec bit">1</button>
+        <button class="dec">2</button>
+        <button class="dec">3</button>
+        <button class="bit operation">-</button>
+        <button class="bit operation">Pow</button>
+        <button class="dec bit">0</button>
+        <button class="other">.</button>
+        <button class="bit other span-two">=</button>
+    </main>
     <script src="./JS/JavaScript.js"></script>
 </body>
 </html>
