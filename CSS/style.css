@@ -4,6 +4,11 @@
     font-weight: normal;
 }
 
+:root {
+    --center: 40px;
+    --text-size: 1.5rem;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -15,16 +20,17 @@ p {
 }
 
 .calculator-grid {
+    margin-top: var(--center);
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(5, 90px);
-    grid-template-rows: minmax(120px, auto) repeat(7, 75px);
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: minmax(120px, auto) repeat(7, 65px);
 }
 
 .calculator-grid > button {
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: var(--text-size);
     border: 1px solid white;
     outline: none;
     background-color: rgba(122, 236, 46, 0.726);
@@ -52,5 +58,30 @@ p {
 
 .output .hex-operand, .binary-operand, .decimal-operand {
     color: white;
-    font-size: 1.8rem;
+    font-size: var(--text-size);
+}
+
+/* Responsive Web Design */
+@media screen and (max-width: 600px) {
+    .calculator-grid {
+        margin-top: calc(var(--center) + 40px);
+        grid-template-columns: repeat(5, 60px);
+        grid-template-rows: minmax(120px, auto) repeat(7, 55px);
+    }
+
+    .calculator-grid > button {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .calculator-grid {
+        margin-top: calc(var(--center) + 50px);
+        grid-template-columns: repeat(5, 45px);
+        grid-template-rows: minmax(120px, auto) repeat(7, 40px);
+    }
+
+    .calculator-grid > button {
+        font-size: 0.8rem;
+    }
 }
