@@ -8,8 +8,6 @@ Building a simple calculator using the technologies I Learned myself.
 
 
 
-
-
 ## Technologies Used
 - HTML
 - CSS

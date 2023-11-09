@@ -6,7 +6,7 @@
 
 :root {
     --center: 40px;
-    --text-size: 1.5rem;
+    --text-size: 1.2rem;
 }
 
 body {
@@ -36,12 +36,8 @@ p {
     background-color: #7aec2eb9;
 }
 
-button:hover {
+button:active {
     background: #00000095;
-}
-
-.active {
-    background: red;
 }
 
 .span-two {
@@ -74,7 +70,7 @@ button:hover {
     }
 
     .calculator-grid > button {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
